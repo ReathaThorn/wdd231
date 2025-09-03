@@ -1,0 +1,19 @@
+@media (min-width: 640px) {
+  #menu {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  nav li {
+    margin: 0 0.5rem;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
