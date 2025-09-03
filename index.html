@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reatha Thorn WDD231 Course Home Page" />
+  <meta name="author" content="Reatha Thorn" />
+  <title>WDD231 | Course Home Page</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <!-- JavaScript -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="Site Logo" class="logo" />
+    <span class="site-owner">Reatha Thorn</span>
+    <button id="menu" aria-label="Menu">&#9776;</button>
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#">Chamber</a></li>
+        <li><a href="#">Final</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section>
+      <h2>About This Page</h2>
+      <p>This is the WDD231 Course Home Page for Term 5. It demonstrates HTML, CSS, and JavaScript skills.</p>
+    </section>
+
+    <section>
+      <h2>Course Certificate</h2>
+      <div id="course-filters">
+        <button id="all">All Courses</button>
+        <button id="wdd">WDD Courses</button>
+        <button id="cse">CSE Courses</button>
+      </div>
+      <div id="course-cards"></div>
+      <p>Total Credits: <span id="total-credits">0</span></p>
+    </section>
+
+    <section>
+      <h2>Contact & Links</h2>
+      <p>Connect with me on GitHub and LinkedIn below.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="currentyear"></span> | Reatha Thorn | Cambodia
+    </p>
+    <p id="lastModified"></p>
+    <div class="social">
+      <a href="https://github.com/yourusername" target="_blank"><img src="images/github.svg" alt="GitHub" /></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" /></a>
+    </div>
+  </footer>
+</body>
+</html>
