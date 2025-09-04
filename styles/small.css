@@ -1,66 +1,22 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.course-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
   padding: 1rem;
-  background: #004466;
-  color: white;
+  margin: 0.5rem;
+  background: #fff;
 }
 
-header img.logo {
-  height: 40px;
+.course-card.completed {
+  border: 2px solid green;
+  background: #f0fff0;
 }
 
-#menu {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  display: block;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: none;
-  flex-direction: column;
-  background: #00334d;
-}
-
-nav ul.show {
-  display: flex;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  display: block;
-}
-
-nav a.active {
-  background: #006699;
-}
-
-main {
-  padding: 1rem;
-}
-
-footer {
-  text-align: center;
-  background: #004466;
-  color: white;
-  padding: 1rem;
-}
-
-footer img {
-  height: 24px;
-  margin: 0 0.5rem;
+.badge {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #fff;
+  background: green;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
