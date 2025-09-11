@@ -50,3 +50,4 @@ document.getElementById('listBtn').addEventListener('click', () => {
 
 // Initialize
 fetchMembers();
+
