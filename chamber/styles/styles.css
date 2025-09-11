@@ -1,4 +1,4 @@
-/* Normalize basic styles (ensure normalize.css is linked first) */
+/* Normalize must be linked first */
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +21,6 @@ header {
 .nav-links {
   display: flex;
   list-style: none;
-  justify-content: flex-start;
   gap: 1rem;
 }
 
@@ -129,13 +128,8 @@ h1 {
 }
 
 /* Membership levels */
-.member-card.silver {
-  border: 2px solid #c0c0c0;
-}
-
-.member-card.gold {
-  border: 2px solid #ffd700;
-}
+.member-card.silver { border: 2px solid #c0c0c0; }
+.member-card.gold { border: 2px solid #ffd700; }
 
 /* List view adjustments */
 #directory.list .member-card {
@@ -163,19 +157,9 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 600px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  #directory.list .member-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #directory.list .member-card img {
-    max-width: 100%;
-  }
+  .nav-links { flex-direction: column; gap: 0.5rem; }
+  #directory.list .member-card { flex-direction: column; align-items: flex-start; }
+  #directory.list .member-card img { max-width: 100%; }
 }
