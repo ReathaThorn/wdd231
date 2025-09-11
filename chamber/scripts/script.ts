@@ -1,61 +1,52 @@
-// Footer info
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+// scripts/script.js
 
-// Load members
-async function loadMembers() {
-  const response = await fetch("data/members.json");
-  const data = await response.json();
-  displayMembers(data.members);
-}
-
-// Function to return badge icon
-function getBadge(level) {
-  switch (level.toLowerCase()) {
-    case "gold":
-      return "⭐";    // Gold star
-    case "silver":
-      return "🥈";    // Silver medal
-    case "member":
-      return "🟦";    // Blue square
-    default:
-      return "";
+// Function to fetch member data
+async function fetchMembers() {
+  try {
+    const response = await fetch('data/members.json');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const members = await response.json();
+    displayMembers(members);
+  } catch (error) {
+    console.error('Error fetching members:', error);
   }
 }
 
+// Function to display members in the directory
 function displayMembers(members) {
-  const container = document.getElementById("directory");
-  container.innerHTML = "";
-  members.forEach(member => {
-    const card = document.createElement("div");
-    card.classList.add("card");
+  const directory = document.getElementById('directory');
+  directory.innerHTML = ''; // Clear previous content
 
-    // Add membership class
-    const level = member.membership.toLowerCase();
-    card.classList.add(level);
+  members.forEach(member => {
+    const card = document.createElement('div');
+    card.className = 'member-card';
+
+    // Add membership level as a class
+    if (member.membershipLevel === 2) card.classList.add('silver');
+    if (member.membershipLevel === 3) card.classList.add('gold');
 
     card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo">
+      <img src="images/${member.image}" alt="${member.name}" />
       <h3>${member.name}</h3>
       <p>${member.address}</p>
       <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">Visit Website</a>
-      <p class="membership">Membership: ${getBadge(member.membership)} ${member.membership}</p>
+      <a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
     `;
-    container.appendChild(card);
+
+    directory.appendChild(card);
   });
 }
 
-// Toggle views
-document.getElementById("gridBtn").addEventListener("click", () => {
-  document.getElementById("directory").classList.add("grid");
-  document.getElementById("directory").classList.remove("list");
+// Toggle view buttons
+document.getElementById('gridBtn').addEventListener('click', () => {
+  document.getElementById('directory').className = 'grid';
 });
 
-document.getElementById("listBtn").addEventListener("click", () => {
-  document.getElementById("directory").classList.add("list");
-  document.getElementById("directory").classList.remove("grid");
+document.getElementById('listBtn').addEventListener('click', () => {
+  document.getElementById('directory').className = 'list';
 });
 
-loadMembers();
-
+// Initialize
+fetchMembers();
