@@ -1,71 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-     <meta name="description" content="Explore local businesses and members in the Chamber of Commerce Directory for our city.">
-    />
-    <meta name="author" content="Reatha Thorn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore local businesses and members in the Chamber of Commerce Directory for our city.">
+  <meta name="author" content="Reatha Thorn">
 
-    <!-- Facebook Open Graph -->
-    <meta property="og:title" content="Chamber of Commerce Directory" />
-    <meta
-      property="og:description"
-      content="Discover local businesses in our Chamber of Commerce Directory."
-    />
-    <meta
-      property="og:image"
-      content="https://your-github-username.github.io/wdd231/chamber/images/og-image.jpg"
-    />
-    <meta
-      property="og:url"
-      content="https://your-github-username.github.io/wdd231/chamber/directory.html"
-    />
-    <meta property="og:type" content="website" />
+  <!-- Facebook Open Graph -->
+  <meta property="og:title" content="Chamber of Commerce Directory">
+  <meta property="og:description" content="Discover local businesses in our Chamber of Commerce Directory.">
+  <meta property="og:image" content="https://ReathaThorn.github.io/wdd231/chamber/images/og-image.jpg">
+  <meta property="og:url" content="https://ReathaThorn.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
 
-    <title>Chamber Directory | WDD231</title>
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+  <title>Chamber Directory | WDD231</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
 
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/styles.css">
-  </head>
-  <body>
-    <header>
-      <h1>Chamber of Commerce</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="directory.html" class="active">Directory</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <main>
-      <section class="view-toggle">
-        <h2>View Options</h2>
-        <button id="gridBtn">Grid View</button>
-        <button id="listBtn">List View</button>
-      </section>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <section id="directory" class="grid">
-        <h2>Member Directory</h2>
-        <!-- Cards will load here -->
-      </section>
-    </main>
+  <main>
+    <h1>Chamber Directory | WDD231</h1>
 
-    <footer>
-      <p>Contact: chamber@example.com | (555) 123-4567</p>
-      <p>&copy; <span id="year"></span> | Your Full Name | WDD 231</p>
-      <p>Last Modified: <span id="lastModified"></span></p>
-    </footer>
+    <section class="view-toggle">
+      <h2>View Options</h2>
+      <button id="gridBtn">Grid View</button>
+      <button id="listBtn">List View</button>
+    </section>
 
-    <script src="js/script.js" defer></script>
-  </body>
+    <section id="directory" class="grid">
+      <h2>Member Directory</h2>
+      <!-- Member cards will load here from members.json -->
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact: chamber@example.com | (555) 123-4567</p>
+    <p>&copy; <span id="year"></span> | Reatha Thorn | WDD231</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <!-- JS -->
+  <script src="scripts/script.js" defer></script>
+  <script>
+    // Footer dynamic year and last modified
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
 </html>
-
-
-
-
