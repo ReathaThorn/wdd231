@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,9 +29,9 @@
   <header>
     <nav>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html" class="active">Directory</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="index.html" title="Go to Home page">Home</a></li>
+        <li><a href="directory.html" class="active" title="View the Chamber Directory">Directory</a></li>
+        <li><a href="about.html" title="Learn About Us">About</a></li>
       </ul>
     </nav>
   </header>
@@ -48,6 +48,7 @@
     <section id="directory" class="grid">
       <h2>Member Directory</h2>
       <!-- Member cards will load here from members.json -->
+      <img src="images/sample-member.jpg" alt="Sample Member" width="150" height="150">
     </section>
   </main>
 
@@ -59,10 +60,5 @@
 
   <!-- JS -->
   <script src="scripts/script.js" defer></script>
-  <script>
-    // Footer dynamic year and last modified
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
 </body>
 </html>
