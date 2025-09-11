@@ -1,53 +1,20 @@
-// scripts/script.js
+document.addEventListener("DOMContentLoaded", () => {
+  // Footer year and last modified
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("lastModified").textContent = document.lastModified;
 
-// Function to fetch member data
-async function fetchMembers() {
-  try {
-    const response = await fetch('data/members.json');
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    const members = await response.json();
-    displayMembers(members);
-  } catch (error) {
-    console.error('Error fetching members:', error);
-  }
-}
+  // Grid/List view toggle
+  const directory = document.getElementById("directory");
+  const gridBtn = document.getElementById("gridBtn");
+  const listBtn = document.getElementById("listBtn");
 
-// Function to display members in the directory
-function displayMembers(members) {
-  const directory = document.getElementById('directory');
-  directory.innerHTML = ''; // Clear previous content
-
-  members.forEach(member => {
-    const card = document.createElement('div');
-    card.className = 'member-card';
-
-    // Add membership level as a class
-    if (member.membershipLevel === 2) card.classList.add('silver');
-    if (member.membershipLevel === 3) card.classList.add('gold');
-
-    card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name}" />
-      <h3>${member.name}</h3>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
-    `;
-
-    directory.appendChild(card);
+  gridBtn.addEventListener("click", () => {
+    directory.classList.add("grid");
+    directory.classList.remove("list");
   });
-}
 
-// Toggle view buttons
-document.getElementById('gridBtn').addEventListener('click', () => {
-  document.getElementById('directory').className = 'grid';
+  listBtn.addEventListener("click", () => {
+    directory.classList.add("list");
+    directory.classList.remove("grid");
+  });
 });
-
-document.getElementById('listBtn').addEventListener('click', () => {
-  document.getElementById('directory').className = 'list';
-});
-
-// Initialize
-fetchMembers();
-
