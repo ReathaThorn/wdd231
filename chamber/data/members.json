@@ -1,61 +1,18 @@
-{
-  "members": [
-    {
-      "name": "Tech Solutions",
-      "address": "123 Main St, Cityville",
-      "phone": "555-1234",
-      "website": "https://techsolutions.com",
-      "image": "tech.png",
-      "membership": "Gold"
-    },
-    {
-      "name": "Green Market",
-      "address": "45 Oak Rd, Cityville",
-      "phone": "555-5678",
-      "website": "https://greenmarket.com",
-      "image": "market.png",
-      "membership": "Silver"
-    },
-    {
-      "name": "City Bank",
-      "address": "789 Elm St, Cityville",
-      "phone": "555-2468",
-      "website": "https://citybank.com",
-      "image": "bank.png",
-      "membership": "Gold"
-    },
-    {
-      "name": "Health First Clinic",
-      "address": "101 Pine Ave, Cityville",
-      "phone": "555-1122",
-      "website": "https://healthfirst.com",
-      "image": "clinic.png",
-      "membership": "Member"
-    },
-    {
-      "name": "Bright Academy",
-      "address": "202 Maple Dr, Cityville",
-      "phone": "555-3344",
-      "website": "https://brightacademy.com",
-      "image": "school.png",
-      "membership": "Silver"
-    },
-    {
-      "name": "Fitness Pro Gym",
-      "address": "303 Birch Blvd, Cityville",
-      "phone": "555-5566",
-      "website": "https://fitnesspro.com",
-      "image": "gym.png",
-      "membership": "Gold"
-    },
-    {
-      "name": "City Café",
-      "address": "404 Cedar Ln, Cityville",
-      "phone": "555-7788",
-      "website": "https://citycafe.com",
-      "image": "cafe.png",
-      "membership": "Member"
-    }
-  ]
-}
-
+[
+  {
+    "name": "Bank of City",
+    "address": "123 Main St, YourCity",
+    "phone": "(555) 111-2222",
+    "website": "https://bankofcity.com",
+    "image": "bank.png",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Cafe Aroma",
+    "address": "45 Coffee Rd, YourCity",
+    "phone": "(555) 333-4444",
+    "website": "https://cafearoma.com",
+    "image": "cafe.png",
+    "membershipLevel": 2
+  }
+]
