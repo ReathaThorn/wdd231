@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chamber Home | WDD231</title>
-  <meta name="description" content="Welcome to our Chamber of Commerce website. Discover local businesses, events, and opportunities.">
+  
+  <title>Battambang Chamber of Commerce</title>
+  <meta name="description" content="Welcome to the Battambang Chamber of Commerce. Explore local businesses and connect with our members.">
   <meta name="author" content="Reatha Thorn">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Chamber of Commerce Home">
-  <meta property="og:description" content="Connecting local businesses and community growth.">
+  <meta property="og:title" content="Battambang Chamber of Commerce">
+  <meta property="og:description" content="Connect with local businesses and members of the Battambang Chamber of Commerce.">
   <meta property="og:image" content="images/og-image.jpg">
   <meta property="og:url" content="https://reathathorn.github.io/wdd231/chamber/index.html">
+  <meta property="og:type" content="website">
 
-  <link rel="icon" href="images/og-image.jpg">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png">
+
+  <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -22,7 +27,6 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to Our Chamber of Commerce</h1>
     <nav>
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
@@ -30,12 +34,21 @@
       </ul>
     </nav>
   </header>
+
   <main>
-    <p>Discover businesses, opportunities, and community events with our Chamber.</p>
+    <h1>Welcome to the Battambang Chamber of Commerce</h1>
+    <p style="text-align:center; margin: 20px 0;">
+      Explore our local businesses and members. Visit our <a href="directory.html">Directory Page</a> to see all members.
+    </p>
+    <img src="images/og-image.jpg" alt="Chamber Overview" style="display:block; margin:0 auto; max-width:300px;">
   </main>
+
   <footer>
-    <p>&copy; <span id="year"></span> Chamber of Commerce | Reatha Thorn</p>
+    <p>&copy; <span id="year"></span> Battambang Chamber of Commerce | Reatha Thorn</p>
   </footer>
-  <script src="scripts/script.js" defer></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
