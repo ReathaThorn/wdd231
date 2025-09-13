@@ -9,10 +9,12 @@ const listBtn = document.querySelector("#list");
 async function getMembers() {
   try {
     const response = await fetch("data/members.json");
+    if (!response.ok) throw new Error("Network response was not ok");
     const data = await response.json();
     displayMembers(data.members);
   } catch (error) {
     console.error("Error loading members:", error);
+    membersContainer.innerHTML = "<p>Failed to load members. Please try again later.</p>";
   }
 }
 
