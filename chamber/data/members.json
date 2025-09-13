@@ -1,84 +1,76 @@
 {
   "members": [
     {
-      "name": "Cafe Aroma",
-      "image": "cafe.png",
+      "name": "Battambang Bank",
       "address": "123 Main Street, Battambang",
-      "phone": "012345678",
-      "website": "https://cafe-aroma.com",
-      "membership": "Gold"
+      "phone": "012-345-678",
+      "website": "https://www.battambangbank.com",
+      "membership": "Gold",
+      "image": "bank.png"
     },
     {
-      "name": "Bank Trust",
-      "image": "bank.png",
-      "address": "456 Central Ave, Battambang",
-      "phone": "0987654321",
-      "website": "https://banktrust.com",
-      "membership": "Silver"
+      "name": "Cafe Delight",
+      "address": "45 Market Road, Battambang",
+      "phone": "012-987-654",
+      "website": "https://www.cafedelight.com",
+      "membership": "Silver",
+      "image": "cafe.png"
     },
     {
-      "name": "Gym Power",
-      "image": "gym.png",
-      "address": "789 Fitness Road, Battambang",
-      "phone": "011223344",
-      "website": "https://gympower.com",
-      "membership": "Bronze"
+      "name": "City Clinic",
+      "address": "78 Health Avenue, Battambang",
+      "phone": "012-111-222",
+      "website": "https://www.cityclinic.com",
+      "membership": "Platinum",
+      "image": "clinic.png"
     },
     {
-      "name": "PC Mart",
-      "image": "pcmart.png",
-      "address": "321 Tech Street, Battambang",
-      "phone": "022334455",
-      "website": "https://pcmart.com",
-      "membership": "Gold"
-    },
-    {
-      "name": "Health Clinic",
-      "image": "clinic.png",
-      "address": "654 Health Ave, Battambang",
-      "phone": "033445566",
-      "website": "https://healthclinic.com",
-      "membership": "Silver"
+      "name": "Gym Active",
+      "address": "9 Fitness Street, Battambang",
+      "phone": "012-333-444",
+      "website": "https://www.gymactive.com",
+      "membership": "Silver",
+      "image": "gym.png"
     },
     {
       "name": "Hotel Paradise",
-      "image": "hotel.jpg",
-      "address": "987 Sunset Blvd, Battambang",
-      "phone": "044556677",
-      "website": "https://hotelparadise.com",
-      "membership": "Gold"
+      "address": "12 Vacation Lane, Battambang",
+      "phone": "012-555-666",
+      "website": "https://www.hotelparadise.com",
+      "membership": "Gold",
+      "image": "hotel.jpg"
     },
     {
-      "name": "School Bright",
-      "image": "school.png",
-      "address": "159 Education Lane, Battambang",
-      "phone": "055667788",
-      "website": "https://schoolbright.com",
-      "membership": "Silver"
+      "name": "PC Mart",
+      "address": "88 Tech Road, Battambang",
+      "phone": "012-777-888",
+      "website": "https://www.pcmart.com",
+      "membership": "Platinum",
+      "image": "pcmart.png"
     },
     {
-      "name": "Local Market",
-      "image": "market.png",
-      "address": "753 Market Road, Battambang",
-      "phone": "066778899",
-      "website": "https://localmarket.com",
-      "membership": "Bronze"
+      "name": "School Academy",
+      "address": "33 Knowledge Street, Battambang",
+      "phone": "012-999-000",
+      "website": "https://www.schoolacademy.com",
+      "membership": "Silver",
+      "image": "school.png"
     },
     {
-      "name": "Tech Solutions",
-      "image": "tech.png",
-      "address": "852 Innovation St, Battambang",
-      "phone": "077889900",
-      "website": "https://techsolutions.com",
-      "membership": "Gold"
+      "name": "Tech Shop",
+      "address": "21 Innovation Road, Battambang",
+      "phone": "012-222-333",
+      "website": "https://www.techshop.com",
+      "membership": "Gold",
+      "image": "tech.png"
     },
     {
-      "name": "Shop Easy",
-      "image": "shop.jpg",
-      "address": "951 Shopping Ave, Battambang",
-      "phone": "088990011",
-      "website": "https://shopeasy.com",
-      "membership": "Silver"
+      "name": "City Market",
+      "address": "77 Central Street, Battambang",
+      "phone": "012-444-555",
+      "website": "https://www.citymarket.com",
+      "membership": "Bronze",
+      "image": "market.png"
     }
   ]
 }
