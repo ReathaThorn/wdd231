@@ -1,42 +1,84 @@
-document.getElementById("year").textContent = new Date().getFullYear();
-
-const membersContainer = document.querySelector("#members");
-const gridBtn = document.querySelector("#grid");
-const listBtn = document.querySelector("#list");
-
-async function getMembers() {
-  try {
-    const response = await fetch("data/members.json");
-    const data = await response.json();
-    displayMembers(data.members);
-  } catch (error) {
-    console.error("Error loading members:", error);
-  }
+{
+  "members": [
+    {
+      "name": "Cafe Aroma",
+      "image": "cafe.png",
+      "address": "123 Main Street, Battambang",
+      "phone": "012345678",
+      "website": "https://cafe-aroma.com",
+      "membership": "Gold"
+    },
+    {
+      "name": "Bank Trust",
+      "image": "bank.png",
+      "address": "456 Central Ave, Battambang",
+      "phone": "0987654321",
+      "website": "https://banktrust.com",
+      "membership": "Silver"
+    },
+    {
+      "name": "Gym Power",
+      "image": "gym.png",
+      "address": "789 Fitness Road, Battambang",
+      "phone": "011223344",
+      "website": "https://gympower.com",
+      "membership": "Bronze"
+    },
+    {
+      "name": "PC Mart",
+      "image": "pcmart.png",
+      "address": "321 Tech Street, Battambang",
+      "phone": "022334455",
+      "website": "https://pcmart.com",
+      "membership": "Gold"
+    },
+    {
+      "name": "Health Clinic",
+      "image": "clinic.png",
+      "address": "654 Health Ave, Battambang",
+      "phone": "033445566",
+      "website": "https://healthclinic.com",
+      "membership": "Silver"
+    },
+    {
+      "name": "Hotel Paradise",
+      "image": "hotel.jpg",
+      "address": "987 Sunset Blvd, Battambang",
+      "phone": "044556677",
+      "website": "https://hotelparadise.com",
+      "membership": "Gold"
+    },
+    {
+      "name": "School Bright",
+      "image": "school.png",
+      "address": "159 Education Lane, Battambang",
+      "phone": "055667788",
+      "website": "https://schoolbright.com",
+      "membership": "Silver"
+    },
+    {
+      "name": "Local Market",
+      "image": "market.png",
+      "address": "753 Market Road, Battambang",
+      "phone": "066778899",
+      "website": "https://localmarket.com",
+      "membership": "Bronze"
+    },
+    {
+      "name": "Tech Solutions",
+      "image": "tech.png",
+      "address": "852 Innovation St, Battambang",
+      "phone": "077889900",
+      "website": "https://techsolutions.com",
+      "membership": "Gold"
+    },
+    {
+      "name": "Shop Easy",
+      "image": "shop.jpg",
+      "address": "951 Shopping Ave, Battambang",
+      "phone": "088990011",
+      "website": "https://shopeasy.com",
+      "membership": "Silver"
+    }
+  ]
 }
-
-function displayMembers(members) {
-  membersContainer.innerHTML = "";
-  members.forEach(member => {
-    const div = document.createElement("div");
-    div.classList.add("member");
-    div.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name}">
-      <h2>${member.name}</h2>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">Visit Website</a>
-      <p>Membership Level: ${member.membership}</p>
-    `;
-    membersContainer.appendChild(div);
-  });
-}
-
-gridBtn.addEventListener("click", () => {
-  membersContainer.classList.remove("list-view");
-});
-
-listBtn.addEventListener("click", () => {
-  membersContainer.classList.add("list-view");
-});
-
-getMembers();
