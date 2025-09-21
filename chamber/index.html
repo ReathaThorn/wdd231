@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Battambang Chamber of Commerce</title>
-  <meta name="description" content="Welcome to the Battambang Chamber of Commerce. Explore local businesses and connect with our members.">
+
+  <!-- Page Title -->
+  <title>Battambang Chamber of Commerce - Home</title>
+
+  <!-- Meta Tags -->
+  <meta name="description" content="Discover Battambang Chamber of Commerce. Support local businesses, connect with members, and explore opportunities in our community.">
   <meta name="author" content="Reatha Thorn">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Battambang Chamber of Commerce">
+  <!-- Open Graph (Social Media Preview) -->
+  <meta property="og:title" content="Battambang Chamber of Commerce - Home">
   <meta property="og:description" content="Connect with local businesses and members of the Battambang Chamber of Commerce.">
   <meta property="og:image" content="images/og-image.jpg">
   <meta property="og:url" content="https://reathathorn.github.io/wdd231/chamber/index.html">
@@ -25,30 +28,80 @@
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
+  <!-- Header & Navigation -->
   <header>
+    <h1 class="visually-hidden">Battambang Chamber of Commerce</h1>
     <nav>
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Welcome to the Battambang Chamber of Commerce</h1>
-    <p style="text-align:center; margin: 20px 0;">
-      Explore our local businesses and members. Visit our <a href="directory.html">Directory Page</a> to see all members.
-    </p>
-    <img src="images/og-image.jpg" alt="Chamber Overview" style="display:block; margin:0 auto; max-width:300px;">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2 class="visually-hidden">Hero Section</h2>
+      <img src="images/pcmart.png" alt="Battambang city view" class="hero-image">
+      <a href="join.html" class="cta-button">Join Now!</a>
+    </section>
+
+    <!-- Mission Section -->
+    <section>
+      <h2>Our Mission</h2>
+      <p>We aim to support and connect local businesses in Battambang, fostering growth, collaboration, and community engagement.</p>
+    </section>
+
+    <!-- Featured Businesses Section -->
+    <section>
+      <h2>Featured Businesses</h2>
+      <h3>PC Mart Cambodia</h3>
+      <p>Electronics and computer supplies in Battambang.</p>
+      <h3>Local Cafe</h3>
+      <p>Enjoy fresh coffee and pastries while supporting local farmers.</p>
+      <h3>Battambang School Supplies</h3>
+      <p>Providing essential learning materials for students and educators.</p>
+    </section>
+
+    <!-- Current Events Section -->
+    <section id="current-events">
+      <h2>Current Events</h2>
+      <p>Stay tuned for upcoming events! This section will be updated dynamically.</p>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="weather">
+      <h2>Weather</h2>
+      <p>Loading current weather data...</p>
+    </section>
+
+    <!-- Company Spotlight Section -->
+    <section id="spotlight">
+      <h2>Company Spotlight</h2>
+      <div class="spotlight-container">
+        <!-- JS will populate 2-3 random Gold/Silver members here -->
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <aside class="cta">
+      <h2>Join the Chamber Today!</h2>
+      <p>Connect with fellow business owners and grow your network.</p>
+      <a href="join.html" class="cta-button">Learn More</a>
+    </aside>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; <span id="year"></span> Battambang Chamber of Commerce | Reatha Thorn</p>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <!-- External JavaScript -->
+  <script src="scripts/script.js" defer></script>
 </body>
 </html>
