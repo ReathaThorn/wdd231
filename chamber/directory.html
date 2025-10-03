@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover local businesses and members of the Battambang Chamber of Commerce. Connect and grow with our community.">
-  <meta name="author" content="Reatha Thorn">
-  <title>Battambang Chamber of Commerce Directory</title>
-  <link rel="stylesheet" href="styles/chamber.css">
-</head>
-<body>
+<main>
+  <h1>Battambang Chamber of Commerce Directory</h1>
 
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="chamber.html">About</a>
-      <a href="directory.html">Directory</a>
-    </nav>
-  </header>
+  <!-- Toggle buttons -->
+  <div class="view-toggle">
+    <button id="gridView">Grid View</button>
+    <button id="listView">List View</button>
+  </div>
 
-  <main>
-    <h1>Battambang Chamber of Commerce Directory</h1>
-    <div id="members" class="member-container"></div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Battambang Chamber of Commerce</p>
-  </footer>
-
-  <script src="scripts/chamber.js"></script>
-</body>
-</html>
+  <div id="members" class="member-container"></div>
+</main>
