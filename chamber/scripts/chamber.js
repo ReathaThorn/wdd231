@@ -1,19 +1,18 @@
-const membersContainer = document.querySelector('#members');
-const gridBtn = document.querySelector('#gridView');
-const listBtn = document.querySelector('#listView');
+const membersContainer = document.getElementById('members');
+const gridBtn = document.getElementById('gridView');
+const listBtn = document.getElementById('listView');
 
-async function getMembers() {
+async function loadMembers() {
   try {
-    const response = await fetch('data/members.json');
-    if (!response.ok) throw new Error('Failed to load JSON data');
-
+    const response = await fetch('members.json');
     const members = await response.json();
 
-    members.forEach(member => {
-      const memberCard = document.createElement('div');
-      memberCard.classList.add('member');
+    membersContainer.innerHTML = '';
 
-      memberCard.innerHTML = `
+    members.forEach(member => {
+      const card = document.createElement('div');
+      card.classList.add('member');
+      card.innerHTML = `
         <img src="images/${member.image}" alt="${member.name} - ${member.membership}">
         <h3>${member.name}</h3>
         <p>${member.address}</p>
@@ -21,17 +20,16 @@ async function getMembers() {
         <a href="${member.website}" target="_blank">Website</a>
         <p>Membership: ${member.membership}</p>
       `;
-      membersContainer.appendChild(memberCard);
+      membersContainer.appendChild(card);
     });
   } catch (error) {
-    console.error(error);
-    membersContainer.innerHTML = '<p>Failed to load members. Please try again later.</p>';
+    console.error('Failed to load members:', error);
+    membersContainer.innerHTML = '<p>Error loading members.</p>';
   }
 }
 
-getMembers();
+loadMembers();
 
-// Toggle grid/list view
 gridBtn.addEventListener('click', () => {
   membersContainer.classList.remove('list-view');
   membersContainer.classList.add('grid-view');
