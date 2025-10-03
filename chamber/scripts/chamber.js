@@ -1,4 +1,6 @@
 const membersContainer = document.querySelector('#members');
+const gridBtn = document.querySelector('#gridView');
+const listBtn = document.querySelector('#listView');
 
 async function getMembers() {
   try {
@@ -28,3 +30,14 @@ async function getMembers() {
 }
 
 getMembers();
+
+// Toggle grid/list view
+gridBtn.addEventListener('click', () => {
+  membersContainer.classList.remove('list-view');
+  membersContainer.classList.add('grid-view');
+});
+
+listBtn.addEventListener('click', () => {
+  membersContainer.classList.remove('grid-view');
+  membersContainer.classList.add('list-view');
+});
