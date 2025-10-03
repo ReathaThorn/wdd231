@@ -1,47 +1,30 @@
-// Fetch members from JSON and render
-async function displayMembers() {
-  const response = await fetch('data/members.json');
-  const members = await response.json();
+const membersContainer = document.querySelector('#members');
 
-  const membersContainer = document.getElementById('members');
-  membersContainer.innerHTML = ''; // Clear container
+async function getMembers() {
+  try {
+    const response = await fetch('data/members.json');
+    if (!response.ok) throw new Error('Failed to load JSON data');
 
-  members.forEach(member => {
-    const memberDiv = document.createElement('div');
-    memberDiv.classList.add('member');
+    const members = await response.json();
 
-    memberDiv.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name}">
-      <h3>${member.name}</h3>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <p><a href="${member.website}" target="_blank">${member.website}</a></p>
-      <p>Membership: ${member.membership}</p>
-    `;
+    members.forEach(member => {
+      const memberCard = document.createElement('div');
+      memberCard.classList.add('member');
 
-    membersContainer.appendChild(memberDiv);
-  });
+      memberCard.innerHTML = `
+        <img src="images/${member.image}" alt="${member.name} - ${member.membership}">
+        <h3>${member.name}</h3>
+        <p>${member.address}</p>
+        <p>${member.phone}</p>
+        <a href="${member.website}" target="_blank">Website</a>
+        <p>Membership: ${member.membership}</p>
+      `;
+      membersContainer.appendChild(memberCard);
+    });
+  } catch (error) {
+    console.error(error);
+    membersContainer.innerHTML = '<p>Failed to load members. Please try again later.</p>';
+  }
 }
 
-// Initialize Grid/List Toggle
-function setupViewToggle() {
-  const gridBtn = document.getElementById('grid-view');
-  const listBtn = document.getElementById('list-view');
-  const membersContainer = document.getElementById('members');
-
-  gridBtn.addEventListener('click', () => {
-    membersContainer.classList.add('grid');
-    membersContainer.classList.remove('list');
-  });
-
-  listBtn.addEventListener('click', () => {
-    membersContainer.classList.add('list');
-    membersContainer.classList.remove('grid');
-  });
-}
-
-// Initialize
-window.addEventListener('DOMContentLoaded', () => {
-  displayMembers();
-  setupViewToggle();
-});
+getMembers();
