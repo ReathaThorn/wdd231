@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Alice Johnson",
+    "address": "123 Main St, Cityville",
+    "phone": "555-1234",
+    "website": "http://alice.com",
+    "image": "alice.jpg",
+    "membership": "Gold"
+  },
+  {
+    "name": "Bob Smith",
+    "address": "456 Oak St, Townsville",
+    "phone": "555-5678",
+    "website": "http://bob.com",
+    "image": "bob.jpg",
+    "membership": "Silver"
+  },
+  {
+    "name": "Charlie Lee",
+    "address": "789 Pine St, Villageville",
+    "phone": "555-9012",
+    "website": "http://charlie.com",
+    "image": "charlie.jpg",
+    "membership": "Platinum"
+  },
+  {
+    "name": "Dana Kim",
+    "address": "321 Maple St, Hamletville",
+    "phone": "555-3456",
+    "website": "http://dana.com",
+    "image": "dana.jpg",
+    "membership": "Gold"
+  },
+  {
+    "name": "Ethan Brown",
+    "address": "654 Elm St, Citytown",
+    "phone": "555-7890",
+    "website": "http://ethan.com",
+    "image": "ethan.jpg",
+    "membership": "Silver"
+  },
+  {
+    "name": "Fiona White",
+    "address": "987 Cedar St, Townham",
+    "phone": "555-2345",
+    "website": "http://fiona.com",
+    "image": "fiona.jpg",
+    "membership": "Platinum"
+  },
+  {
+    "name": "George Black",
+    "address": "135 Spruce St, Villagetown",
+    "phone": "555-6789",
+    "website": "http://george.com",
+    "image": "george.jpg",
+    "membership": "Gold"
+  }
+]
