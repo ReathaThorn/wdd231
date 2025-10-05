@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+header, footer {
+  background: #004466;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+main {
+  padding: 1rem;
+}
+
+.membership-levels .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.close {
+  float: right;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 2rem;
+  background: #e9f5ff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+form fieldset {
+  border: none;
+  margin-bottom: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background: #004466;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
