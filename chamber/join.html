@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join - Battambang Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/join.css">
+  <script defer src="scripts/join.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="chamber.html">Chamber</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html" class="active">Join</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Join the Chamber of Commerce</h1>
+    <p>Fill out the form below to become a member and unlock exclusive benefits.</p>
+
+    <section class="membership-levels">
+      <h2>Membership Levels</h2>
+      <div class="cards">
+        <div class="card" data-modal="modal1">
+          <h3>Bronze</h3>
+          <p>Basic listing and community events</p>
+        </div>
+        <div class="card" data-modal="modal2">
+          <h3>Silver</h3>
+          <p>All Bronze benefits plus networking sessions</p>
+        </div>
+        <div class="card" data-modal="modal3">
+          <h3>Gold</h3>
+          <p>All Silver benefits plus advertising opportunities</p>
+        </div>
+        <div class="card" data-modal="modal4">
+          <h3>Platinum</h3>
+          <p>All Gold benefits plus premium recognition</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Bronze Benefits</h2>
+        <ul>
+          <li>Business directory listing</li>
+          <li>Community event invitations</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Silver Benefits</h2>
+        <ul>
+          <li>All Bronze benefits</li>
+          <li>Networking session invitations</li>
+          <li>Business workshops</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Gold Benefits</h2>
+        <ul>
+          <li>All Silver benefits</li>
+          <li>Advertising opportunities</li>
+          <li>Sponsorship recognition</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Platinum Benefits</h2>
+        <ul>
+          <li>All Gold benefits</li>
+          <li>Premium recognition on homepage</li>
+          <li>Special VIP events</li>
+        </ul>
+      </div>
+    </div>
+
+    <form action="thankyou.html" method="get" class="join-form">
+      <fieldset>
+        <legend>Applicant Information</legend>
+        <label>First Name:
+          <input type="text" name="first" title="First Name" autocomplete="given-name" required>
+        </label>
+        <label>Last Name:
+          <input type="text" name="last" title="Last Name" autocomplete="family-name" required>
+        </label>
+        <label>Email:
+          <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@email.com" required>
+        </label>
+        <label>Phone:
+          <input type="tel" name="phone" title="Phone Number" autocomplete="tel" required>
+        </label>
+        <label>Business/Organization Name:
+          <input type="text" name="organization" title="Organization Name" autocomplete="organization" required>
+        </label>
+        <label>Title/Position:
+          <input type="text" name="title" title="Business Title" pattern="[A-Za-z\s-]{7,}" required>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Membership Level</legend>
+        <label><input type="radio" name="membership" value="bronze" required> Bronze</label>
+        <label><input type="radio" name="membership" value="silver"> Silver</label>
+        <label><input type="radio" name="membership" value="gold"> Gold</label>
+        <label><input type="radio" name="membership" value="platinum"> Platinum</label>
+      </fieldset>
+
+      <input type="hidden" name="timestamp" id="timestamp">
+
+      <button type="submit">Join Now</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Battambang Chamber of Commerce</p>
+  </footer>
+</body>
+</html>
