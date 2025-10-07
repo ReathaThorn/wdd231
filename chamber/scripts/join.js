@@ -1,29 +1,36 @@
-// Year in footer
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Set timestamp
-document.getElementById("timestamp").value = new Date().toLocaleString();
+// Timestamp
+document.getElementById('timestamp').value = new Date().toISOString();
 
 // Modal functionality
-const cards = document.querySelectorAll(".card");
-const modals = document.querySelectorAll(".modal");
-const closes = document.querySelectorAll(".close");
+const modals = document.querySelectorAll('.modal');
+const buttons = document.querySelectorAll('.membership-card button');
+const closeButtons = document.querySelectorAll('.modal .close');
 
-cards.forEach(card => {
-  card.addEventListener("click", () => {
-    const modalId = card.getAttribute("data-modal");
-    document.getElementById(modalId).style.display = "flex";
-  });
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const modalId = btn.parentElement.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'block';
+    });
 });
 
-closes.forEach(close => {
-  close.addEventListener("click", () => {
-    close.parentElement.parentElement.style.display = "none";
-  });
+closeButtons.forEach(span => {
+    span.addEventListener('click', () => {
+        span.parentElement.parentElement.style.display = 'none';
+    });
 });
 
-window.onclick = (e) => {
-  if (e.target.classList.contains("modal")) {
-    e.target.style.display = "none";
-  }
-};
+// Close modal when clicking outside
+window.addEventListener('click', e => {
+    modals.forEach(modal => {
+        if(e.target == modal){
+            modal.style.display = 'none';
+        }
+    });
+});
+
+// Animate membership cards
+window.addEventListener('load', () => {
+    document.querySelectorAll('.membership-card').forEach(card => {
+        card.classList.add('show');
+    });
+});
