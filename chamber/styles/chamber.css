@@ -1,65 +1,166 @@
-body {
-  font-family: Arial, sans-serif;
+/* =====================================================
+Battambang Chamber of Commerce
+Main Stylesheet - chamber.css
+Author: Reatha Thorn
+===================================================== */
+
+/* ========== General Styles ========== */
+:root {
+--primary-color: #004aad;
+--secondary-color: #f2f2f2;
+--accent-color: #ffc107;
+--text-color: #333;
+--max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  }
+
+body {
+font-family: "Poppins", Arial, sans-serif;
+color: var(--text-color);
+background-color: var(--secondary-color);
+line-height: 1.6;
 }
 
-header, footer {
-  background-color: #004080;
-  color: #fff;
-  padding: 10px 20px;
+/* ========== Header ========== */
+header {
+background-color: var(--primary-color);
+color: #fff;
+padding: 1rem 0;
 }
 
-header nav a {
-  color: #fff;
-  margin-right: 15px;
-  text-decoration: none;
+header .container {
+max-width: var(--max-width);
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 1rem;
 }
 
+header h1 {
+font-size: 1.5rem;
+letter-spacing: 1px;
+}
+
+/* ========== Navigation ========== */
+nav ul {
+list-style: none;
+display: flex;
+gap: 1rem;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+font-weight: 500;
+transition: color 0.3s ease;
+}
+
+nav a:hover {
+color: var(--accent-color);
+}
+
+/* ========== Hero Section ========== */
+.hero {
+background: url("../images/og-image.jpg") center/cover no-repeat;
+color: #fff;
+text-align: center;
+padding: 5rem 1rem;
+}
+
+.hero h2 {
+font-size: 2.5rem;
+margin-bottom: 1rem;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+font-size: 1.2rem;
+max-width: 700px;
+margin: 0 auto;
+}
+
+/* ========== Main Content ========== */
 main {
-  padding: 20px;
+max-width: var(--max-width);
+margin: 2rem auto;
+padding: 0 1rem;
 }
 
-.view-toggle {
-  margin-bottom: 15px;
+section {
+margin-bottom: 2rem;
 }
 
-.view-toggle button {
-  padding: 8px 12px;
-  margin-right: 5px;
-  cursor: pointer;
+h2 {
+color: var(--primary-color);
+margin-bottom: 1rem;
+border-bottom: 2px solid var(--accent-color);
+display: inline-block;
+padding-bottom: 0.3rem;
 }
 
-.member-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+/* ========== Cards ========== */
+.card {
+background: #fff;
+border-radius: 10px;
+box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+padding: 1rem;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.member {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-  background: #f9f9f9;
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
 }
 
-.member img {
-  max-width: 100%;
-  height: auto;
+.card img {
+width: 100%;
+border-radius: 10px;
+margin-bottom: 0.8rem;
 }
 
-.member-container.list-view {
-  display: block;
+/* ========== Directory Page Grid ========== */
+.directory-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 1.5rem;
 }
 
-.member-container.list-view .member {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  text-align: left;
+/* ========== Footer ========== */
+footer {
+background-color: var(--primary-color);
+color: #fff;
+text-align: center;
+padding: 1rem 0;
+font-size: 0.9rem;
 }
 
-.member-container.list-view .member img {
-  width: 100px;
-  height: auto;
+footer a {
+color: var(--accent-color);
+text-decoration: none;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+nav ul {
+flex-direction: column;
+gap: 0.5rem;
+}
+
+.hero h2 {
+font-size: 2rem;
+}
+
+header .container {
+flex-direction: column;
+}
 }
