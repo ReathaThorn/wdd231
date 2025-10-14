@@ -1,52 +1,28 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Thank You — FabricCrafts</title>
-  <meta name="description" content="Thank you for contacting FabricCrafts. Your message has been received.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Reatha Thorn">
+  <meta name="description" content="Thank you for contacting FabricCrafts! We will get back to you shortly.">
+  <title>Thank You | FabricCrafts</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="inner">
-      <img src="images/logo.webp" alt="FabricCrafts logo" class="logo">
-      <nav class="primary-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="trips.html">Collections</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <h1>FabricCrafts</h1>
   </header>
 
   <main>
-    <section class="thankyou">
-      <h1>Thank you!</h1>
-      <p id="submitted-data">Loading your submission...</p>
+    <section class="thank-you">
+      <h2>Thank You!</h2>
+      <p>Your message has been received. We’ll get back to you shortly.</p>
+      <a href="index.html" class="cta">Return Home</a>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year-thanks"></span> FabricCrafts</p>
+  <footer>
+    <p>&copy; <span id="year"></span> FabricCrafts | Designed by Reatha Thorn</p>
   </footer>
-
-  <script>
-    // read URL params and display them
-    const params = new URLSearchParams(location.search);
-    const display = document.getElementById('submitted-data');
-    if (!params.toString()) {
-      display.textContent = 'No form data was found.';
-    } else {
-      const entries = [];
-      for (const [k, v] of params.entries()) {
-        entries.push(`${k}: ${v}`);
-      }
-      display.innerHTML = '<strong>Form submission:</strong><br>' + entries.join('<br>');
-    }
-    document.getElementById('year-thanks').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
