@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Reatha Thorn">
-  <meta name="description" content="Welcome to FabricCrafts — explore premium fabrics and handmade crafts designed for creativity and comfort.">
-  <title>FabricCrafts | Home</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/main.js" defer></script>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FabricCrafts | Home</title>
+    <meta name="description" content="Welcome to FabricCrafts — explore premium fabrics and handmade crafts designed for creativity and comfort.">
+    <meta name="author" content="Reatha Thorn">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="FabricCrafts | Home">
+    <meta property="og:description" content="Discover premium fabrics and handmade crafts designed to inspire creativity and comfort. Shop unique fabrics and accessories online.">
+    <meta property="og:image" content="https://reathathorn.github.io/wdd231/project/images/hero-bg.jpg">
+    <meta property="og:url" content="https://reathathorn.github.io/wdd231/project/">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- JS (deferred) -->
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>FabricCrafts</h1>
-    <nav>
-      <button id="menu" aria-label="Toggle Menu">☰</button>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section class="hero">
-      <h2>Welcome to FabricCrafts</h2>
-      <p>Explore our curated collection of fabrics, handcrafted designs, and sustainable materials perfect for your next project.</p>
-      <a href="contact.html" class="cta">Shop or Connect</a>
-    </section>
-
-    <section class="featured">
-      <h2>Featured Products</h2>
-      <div id="product-list" class="product-grid"></div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; <span id="year"></span> FabricCrafts | Designed by Reatha Thorn</p>
-  </footer>
-</body>
-</html>
+    <main>
+        <h1>FabricCrafts</h1>
+        <!-- Hero Image -->
+        <img src="images/hero-bg.jpg" alt="Beautiful handmade fabrics" loading="lazy">
+        <!-- Featured Products Section -->
+        <section class="featured">
+            <!-- Dynamic products/cards will be added here -->
+        </section>
