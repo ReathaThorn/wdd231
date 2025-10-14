@@ -35,28 +35,21 @@
     </header>
 
     <main>
-        <h1>FabricCrafts | Home</h1>
+        <h1>FabricCrafts</h1>
 
         <section class="hero">
-            <img src="images/hero-bg.jpg" alt="Beautiful handmade fabric display" loading="lazy">
+            <img src="images/hero-bg.jpg" alt="Premium fabrics and handmade crafts" loading="lazy">
             <div class="hero-text">
-                <h2>Premium Fabrics & Handmade Crafts</h2>
-                <p>Shop unique fabrics and accessories designed for creativity and comfort.</p>
+                <h2>Explore Creativity and Comfort</h2>
+                <p>Discover premium fabrics and handmade crafts designed to inspire your next project.</p>
             </div>
         </section>
 
         <section class="featured">
             <h2>Featured Products</h2>
-            <div class="products">
-                <img src="images/product1.jpg" alt="Cotton fabric bundle" loading="lazy">
-                <img src="images/product2.jpg" alt="Handmade decorative pillow" loading="lazy">
-                <img src="images/product3.jpg" alt="Wool yarn collection" loading="lazy">
+            <div class="product-cards" id="productCards">
+                <!-- JavaScript will dynamically load products here -->
             </div>
-        </section>
-
-        <section class="about">
-            <h2>About FabricCrafts</h2>
-            <p>FabricCrafts is dedicated to providing premium fabrics and handmade crafts for hobbyists, designers, and craft lovers worldwide.</p>
         </section>
     </main>
 
@@ -65,6 +58,22 @@
     </footer>
 
     <!-- JS -->
-    <script src="scripts/main.js" type="module"></script>
+    <script type="module">
+        import products from './data/products.json' assert { type: 'json' };
+
+        const productContainer = document.getElementById('productCards');
+
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.innerHTML = `
+                <img src="images/${product.image}" alt="${product.name}" loading="lazy">
+                <h3>${product.name}</h3>
+                <p>Category: ${product.category}</p>
+                <p>Price: $${product.price.toFixed(2)}</p>
+            `;
+            productContainer.appendChild(card);
+        });
+    </script>
 </body>
 </html>
