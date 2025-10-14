@@ -1,69 +1,41 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>FabricCrafts — About</title>
-  <meta name="description" content="About FabricCrafts: mission, story, and our community-driven workshops." />
-  <link rel="icon" href="images/favicon.webp">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Reatha Thorn">
+  <meta name="description" content="Learn more about FabricCrafts — our story, mission, and commitment to sustainable crafting.">
+  <title>About | FabricCrafts</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/main.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="inner">
-      <img src="images/logo.webp" alt="FabricCrafts logo" class="logo">
-      <button id="nav-toggle-about" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">☰</button>
-      <nav id="primary-nav" class="primary-nav" role="navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="trips.html">Collections</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="controls">
-        <button id="theme-toggle-about" aria-pressed="false">Toggle Theme</button>
-      </div>
-    </div>
+  <header>
+    <h1>FabricCrafts</h1>
+    <nav>
+      <button id="menu" aria-label="Toggle Menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main id="main">
-    <section class="about-hero">
-      <h1>About FabricCrafts</h1>
-      <p>We celebrate traditional textile craft and teach community workshops to keep skills alive.</p>
+  <main>
+    <section>
+      <h2>Our Story</h2>
+      <p>FabricCrafts began as a passion project to bring together creativity and sustainability. We source eco-friendly materials and collaborate with local artisans to create meaningful pieces for every home.</p>
     </section>
 
-    <section class="mission">
+    <section>
       <h2>Our Mission</h2>
-      <p>To connect makers with audiences and provide hands-on learning experiences that sustain local craft traditions.</p>
-    </section>
-
-    <section class="team">
-      <h2>Meet the Team</h2>
-      <div class="grid team-grid">
-        <div class="card">
-          <img src="images/product1.webp" alt="Team member A" loading="lazy">
-          <h3>Sothea — Founder</h3>
-          <p>Textile artist and community educator.</p>
-        </div>
-        <div class="card">
-          <img src="images/product2.webp" alt="Team member B" loading="lazy">
-          <h3>Vanna — Workshop Lead</h3>
-          <p>Workshop organizer and teacher.</p>
-        </div>
-        <div class="card">
-          <img src="images/product3.webp" alt="Team member C" loading="lazy">
-          <h3>Rith — Operations</h3>
-          <p>Logistics and customer support.</p>
-        </div>
-      </div>
+      <p>We aim to inspire creativity through crafting while promoting environmental responsibility and supporting local talent.</p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year-about"></span> FabricCrafts — Designed by Reatha Thorn</p>
+  <footer>
+    <p>&copy; <span id="year"></span> FabricCrafts | Designed by Reatha Thorn</p>
   </footer>
-
-  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
