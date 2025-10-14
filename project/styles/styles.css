@@ -1,82 +1,188 @@
-:root{
-  --primary:#0d3b66;
-  --accent:#f4d35e;
-  --muted:#f1f5f9;
-  --text:#1f2933;
-  --card-bg:#fff;
-  --max-width:1100px;
+/* =====================================================
+   FabricCrafts Main Stylesheet
+   Author: Reatha Thorn
+   ===================================================== */
+
+/* ---------- Reset & Base Styles ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Reset */
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color:var(--text);
-  background:var(--muted);
-  -webkit-font-smoothing:antialiased;
+html {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
-/* Header */
-.site-header{background:var(--primary);color:#fff;padding:.75rem 1rem}
-.site-header .inner{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;gap:1rem}
-.logo{width:56px;height:auto}
-.primary-nav{margin-left:auto}
-.primary-nav ul{list-style:none;display:flex;gap:1rem}
-.primary-nav a{color:#fff;text-decoration:none;padding:.35rem .5rem;border-radius:6px}
-.primary-nav a.active, .primary-nav a:hover{background:rgba(255,255,255,0.08)}
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #fdfdfd;
+}
 
-/* Nav toggle for small screens */
-.nav-toggle{display:none;background:transparent;border:0;color:#fff;font-size:1.25rem}
-.controls{margin-left:1rem}
+/* ---------- Header & Navigation ---------- */
+header {
+  background-color: steelblue;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/* Main container */
-main{max-width:var(--max-width);margin:1.25rem auto;padding:0 1rem}
+header h1 {
+  font-size: 1.8rem;
+}
 
-/* Hero */
-.hero{display:grid;grid-template-columns:1fr;gap:1rem;align-items:center}
-.hero img{width:100%;height:auto;border-radius:10px;display:block}
-.hero-content{position:relative;padding:.5rem}
-.hero h1{color:var(--primary);margin-bottom:.25rem}
-.cta{display:inline-block;background:var(--primary);color:#fff;padding:.5rem 1rem;border-radius:6px;text-decoration:none}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
 
-/* Newsletter */
-.newsletter{background:var(--card-bg);padding:1rem;border-radius:10px;box-shadow:0 6px 20px rgba(16,24,40,0.06);margin:1rem 0}
-.newsletter-form{display:flex;flex-wrap:wrap;gap:.5rem}
-.newsletter-form input{flex:1 1 200px;padding:.5rem;border:1px solid #ddd;border-radius:6px}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-/* Products grid */
-.featured h2{color:var(--primary);margin-bottom:.5rem}
-.products-grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.card{background:var(--card-bg);border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(16,24,40,0.06);display:flex;flex-direction:column}
-.card img{width:100%;height:180px;object-fit:cover}
-.card .card-body{padding:0.75rem;display:flex;flex-direction:column;flex:1}
-.card h3{margin:.25rem 0;color:var(--primary)}
-.card p{margin:0;font-size:.95rem}
-.card .meta{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
-.card button{background:var(--primary);color:#fff;border:0;padding:.4rem .6rem;border-radius:6px;cursor:pointer}
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+}
 
-/* Grid and team */
-.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+#menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
 
-/* Trips table */
-.trip-table table{width:100%;border-collapse:collapse;margin-top:1rem}
-.trip-table th, .trip-table td{border:1px solid #ddd;padding:.6rem;text-align:center}
-.trip-table th{background:var(--primary);color:#fff}
+/* ---------- Hero Section ---------- */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+}
 
-/* Footer */
-.site-footer{background:var(--primary);color:#fff;text-align:center;padding:1rem;margin-top:2rem}
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 
-/* Modal (dialog fallback) */
-.dialog-backdrop{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.5)}
-.dialog{background:#fff;padding:1rem;border-radius:8px;max-width:650px;width:90%}
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
 
-/* Responsive */
-@media (max-width:800px){
-  .primary-nav{position:absolute;left:0;top:64px;background:var(--primary);width:100%;display:none}
-  .primary-nav.open{display:block}
-  .primary-nav ul{flex-direction:column;padding:1rem}
-  .nav-toggle{display:inline-block}
-  .site-header .inner{align-items:center}
-  .hero{grid-template-columns:1fr}
+.cta {
+  background-color: #ff7f50;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cta:hover {
+  background-color: #e76a36;
+}
+
+/* ---------- Product Grid ---------- */
+.product-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 2rem;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+}
+
+/* ---------- Contact Form ---------- */
+.contact-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: steelblue;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #1f4f7f;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  nav ul.show {
+    display: flex;
+    background-color: steelblue;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  #menu {
+    display: block;
+  }
 }
