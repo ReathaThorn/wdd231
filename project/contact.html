@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>FabricCrafts — Contact</title>
+  <meta name="description" content="Contact FabricCrafts for bookings, workshops, or general inquiries." />
+  <link rel="icon" href="images/favicon.webp">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <img src="images/logo.webp" alt="FabricCrafts logo" class="logo">
+      <button id="nav-toggle-contact" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">☰</button>
+      <nav id="primary-nav" class="primary-nav" role="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="trips.html">Collections</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="controls">
+        <button id="theme-toggle-contact" aria-pressed="false">Toggle Theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="contact-hero">
+      <h1>Contact Us</h1>
+      <p>Questions? Booking? Drop us a message and we'll get back to you!</p>
+    </section>
+
+    <section class="contact-form">
+      <form action="thanks.html" method="get">
+        <label for="fullname">Full name</label>
+        <input id="fullname" name="fullname" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <section class="map">
+      <h2>Find Us</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?... (replace with your real embed)"
+        width="100%" height="300" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year-contact"></span> FabricCrafts — Designed by Reatha Thorn</p>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
