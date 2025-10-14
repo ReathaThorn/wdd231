@@ -1,28 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Reatha Thorn">
-  <meta name="description" content="Thank you for contacting FabricCrafts! We will get back to you shortly.">
-  <title>Thank You | FabricCrafts</title>
-  <link rel="stylesheet" href="styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FabricCrafts | Thank You</title>
+    <meta name="description" content="Thank you for contacting FabricCrafts. Your message has been received, and we will get back to you shortly.">
+    <meta name="author" content="Reatha Thorn">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="FabricCrafts | Thank You">
+    <meta property="og:description" content="Thank you for reaching out to FabricCrafts. Your inquiry has been received.">
+    <meta property="og:image" content="https://reathathorn.github.io/wdd231/project/images/thank-you.jpg">
+    <meta property="og:url" content="https://reathathorn.github.io/wdd231/project/thanks.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <header>
-    <h1>FabricCrafts</h1>
-  </header>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section class="thank-you">
-      <h2>Thank You!</h2>
-      <p>Your message has been received. We’ll get back to you shortly.</p>
-      <a href="index.html" class="cta">Return Home</a>
-    </section>
-  </main>
+    <main>
+        <h1>Thank You!</h1>
 
-  <footer>
-    <p>&copy; <span id="year"></span> FabricCrafts | Designed by Reatha Thorn</p>
-  </footer>
+        <section class="thank-message">
+            <p>Thank you for contacting FabricCrafts. Your message has been successfully submitted. We will respond to your inquiry as soon as possible.</p>
+            <p>You can return to the <a href="index.html">Home Page</a> or explore our <a href="about.html">About Us</a> page.</p>
+        </section>
+
+        <section class="submitted-data">
+            <h2>Your Submitted Information</h2>
+            <div id="displayData">
+                <!-- JavaScript will dynamically display form submission here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 FabricCrafts. All rights reserved.</p>
+    </footer>
+
+    <!-- JS -->
+    <script type="module">
+        // Display submitted form data using URLSearchParams
+        const params = new URLSearchParams(window.location.search);
+        const displayDiv = document.getElementById('displayData');
+
+        if (params.toString() !== '') {
+            const name = params.get('name') || 'N/A';
+            const email = params.get('email') || 'N/A';
+            const subject = params.get('subject') || 'N/A';
+            const message = params.get('message') || 'N/A';
+
+            displayDiv.innerHTML = `
+                <ul>
+                    <li><strong>Name:</strong> ${name}</li>
+                    <li><strong>Email:</strong> ${email}</li>
+                    <li><strong>Subject:</strong> ${subject}</li>
+                    <li><strong>Message:</strong> ${message}</li>
+                </ul>
+            `;
+
+            // Store values in Local Storage
+            localStorage.setItem('contactName', name);
+            localStorage.setItem('contactEmail', email);
+            localStorage.setItem('contactSubject', subject);
+            localStorage.setItem('contactMessage', message);
+        } else {
+            displayDiv.innerHTML = `<p>No form data was submitted.</p>`;
+        }
+    </script>
 </body>
 </html>
