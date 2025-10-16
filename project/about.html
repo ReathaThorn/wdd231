@@ -2,55 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FabricCrafts | About</title>
-    <meta name="description" content="Learn more about FabricCrafts, our story, and our commitment to quality handmade crafts and fabrics.">
+    <meta name="description" content="Learn about FabricCrafts — our mission, values, and the artisans behind our premium fabrics and handmade crafts.">
     <meta name="author" content="Reatha Thorn">
 
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="FabricCrafts | About">
+    <meta property="og:description" content="Learn about FabricCrafts — our mission, values, and the artisans behind our premium fabrics and handmade crafts.">
+    <meta property="og:image" content="https://reathathorn.github.io/wdd231/project/images/about-hero.jpg">
+    <meta property="og:url" content="https://reathathorn.github.io/wdd231/project/about.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <meta property="og:title" content="FabricCrafts | About">
-    <meta property="og:description" content="Discover our story, commitment to quality, and handmade fabrics and crafts at FabricCrafts.">
-    <meta property="og:image" content="https://reathathorn.github.io/wdd231/project/images/hero-bg.jpg">
-    <meta property="og:url" content="https://reathathorn.github.io/wdd231/project/about.html">
-
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <a href="index.html">FabricCrafts</a>
-            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </nav>
     </header>
 
     <main>
-        <section class="about-hero">
-            <h1>About FabricCrafts</h1>
-            <p>We provide high-quality fabrics and handmade crafts to inspire your creativity.</p>
-            <img src="images/hero-bg.jpg" alt="Handmade fabric collection" loading="lazy">
+        <h1>About FabricCrafts</h1>
+
+        <section class="hero">
+            <img src="images/about-hero.jpg" alt="Artisans working on fabrics" loading="lazy">
+            <div class="hero-text">
+                <h2>Our Story</h2>
+                <p>FabricCrafts was founded to bring high-quality fabrics and handmade crafts to creative minds everywhere. Our artisans focus on sustainability, beauty, and functionality.</p>
+            </div>
         </section>
 
         <section class="mission">
             <h2>Our Mission</h2>
-            <p>Our mission is to deliver premium fabrics and craft products that enhance your creative projects and everyday life.</p>
+            <p>To inspire creativity by providing premium fabrics and handcrafted items that delight and empower makers.</p>
+        </section>
+
+        <section class="team">
+            <h2>Meet Our Artisans</h2>
+            <div class="team-members">
+                <div class="member-card">
+                    <img src="images/artisan1.jpg" alt="Artisan 1" loading="lazy">
+                    <h3>Jane Doe</h3>
+                    <p>Lead Fabric Designer</p>
+                </div>
+                <div class="member-card">
+                    <img src="images/artisan2.jpg" alt="Artisan 2" loading="lazy">
+                    <h3>John Smith</h3>
+                    <p>Handcraft Specialist</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 FabricCrafts | All rights reserved</p>
+        <p>&copy; 2025 FabricCrafts. All rights reserved.</p>
     </footer>
 </body>
 </html>
