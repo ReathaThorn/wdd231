@@ -2,60 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FabricCrafts | Contact</title>
-    <meta name="description" content="Contact FabricCrafts for inquiries, support, or questions about our handmade crafts and fabrics.">
+    <meta name="description" content="Get in touch with FabricCrafts for inquiries, orders, or customer support. We’re here to help with all your fabric and craft needs.">
     <meta name="author" content="Reatha Thorn">
 
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="FabricCrafts | Contact">
+    <meta property="og:description" content="Reach out to FabricCrafts for questions, orders, or support. Contact us today!">
+    <meta property="og:image" content="https://reathathorn.github.io/wdd231/project/images/contact-bg.jpg">
+    <meta property="og:url" content="https://reathathorn.github.io/wdd231/project/contact.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <meta property="og:title" content="FabricCrafts | Contact">
-    <meta property="og:description" content="Reach out to FabricCrafts with questions about our handmade crafts and fabrics.">
-    <meta property="og:image" content="https://reathathorn.github.io/wdd231/project/images/hero-bg.jpg">
-    <meta property="og:url" content="https://reathathorn.github.io/wdd231/project/contact.html">
-
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <a href="index.html">FabricCrafts</a>
-            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </nav>
     </header>
 
     <main>
+        <h1>Contact FabricCrafts</h1>
+
+        <section class="contact-info">
+            <h2>Our Contact Information</h2>
+            <p>Email: <a href="mailto:support@fabriccrafts.com">support@fabriccrafts.com</a></p>
+            <p>Phone: +1 (555) 123-4567</p>
+            <p>Address: 123 Craft Lane, Creativity City, USA</p>
+        </section>
+
         <section class="contact-form">
-            <h1>Contact Us</h1>
-            <form action="thanks.html" method="get">
-                <label for="name">Name:</label>
+            <h2>Send Us a Message</h2>
+            <form id="contactForm" action="thanks.html" method="GET">
+                <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label>
+                <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
 
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
 
-                <button type="submit">Submit</button>
+                <button type="submit">Send Message</button>
             </form>
+        </section>
+
+        <section class="map">
+            <h2>Our Location</h2>
+            <img src="images/contact-map.jpg" alt="Map to FabricCrafts store" loading="lazy">
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 FabricCrafts | All rights reserved</p>
+        <p>&copy; 2025 FabricCrafts. All rights reserved.</p>
     </footer>
+
+    <!-- JS -->
+    <script src="scripts/main.js" type="module"></script>
 </body>
 </html>
