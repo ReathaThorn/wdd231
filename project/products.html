@@ -1,16 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FabricCrafts | Home</title> <!-- Update per page -->
-  <meta name="description" content="Welcome to FabricCrafts — explore premium fabrics and handmade crafts designed for creativity and comfort.">
+  <title>Products | FabricCrafts</title>
+  <meta name="description" content="Browse FabricCrafts products including handmade fabrics and unique accessories for your creative projects.">
   <meta name="author" content="Reatha Thorn">
+
+  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico">
-  <!-- Single Google Font link -->
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="FabricCrafts | Products">
+  <meta property="og:description" content="Explore handmade fabrics and unique craft products designed for creativity and comfort.">
+  <meta property="og:image" content="https://reathathorn.github.io/wdd231/project/images/hero-bg.jpg">
+  <meta property="og:url" content="https://reathathorn.github.io/wdd231/project/products.html">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/project.css">
 </head>
+<body>
+  <!-- HEADER -->
+  <header>
     <img src="images/logo.png" alt="FabricCrafts Logo" class="logo">
-    <nav class="nav-links">
+    <nav>
       <a href="index.html">Home</a>
       <a href="products.html" class="active">Products</a>
       <a href="about.html">About</a>
@@ -18,44 +34,39 @@
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero-section">
-    <img src="images/hero-bg.jpg" alt="Products Hero Background" class="hero-image">
-    <div class="hero-text">
-      <h1>Our Products</h1>
-      <p>Handmade fabrics and accessories designed for creativity</p>
-    </div>
-  </section>
-
+  <!-- MAIN -->
   <main>
+    <section class="hero-section">
+      <img src="images/hero-bg.jpg" alt="FabricCrafts Products Hero" class="hero-image">
+      <div class="hero-text">
+        <h1>Our Products</h1>
+        <p>Discover handmade fabrics and unique craft accessories.</p>
+      </div>
+    </section>
+
     <section class="products-section">
-      <h2>Shop Our Collection</h2>
+      <h2>Featured Products</h2>
       <div class="product-list">
-        <div class="product-card">
-          <img src="images/product1.jpg" alt="Handwoven Cotton">
-          <h3>Handwoven Cotton</h3>
-          <p>$25.00</p>
-        </div>
-        <div class="product-card">
-          <img src="images/product2.jpg" alt="Silk Scarf">
-          <h3>Silk Scarf</h3>
-          <p>$35.00</p>
-        </div>
-        <div class="product-card">
-          <img src="images/product3.jpg" alt="Linen Fabric">
-          <h3>Linen Fabric</h3>
-          <p>$20.00</p>
-        </div>
         <div class="product-card">
           <img src="images/product1.jpg" alt="Handwoven Cotton" loading="lazy">
           <h3>Handwoven Cotton</h3>
           <p>$25.00</p>
-          </div>
-        <!-- Add more products as needed -->
+        </div>
+        <div class="product-card">
+          <img src="images/product2.jpg" alt="Silk Scarf" loading="lazy">
+          <h3>Silk Scarf</h3>
+          <p>$40.00</p>
+        </div>
+        <div class="product-card">
+          <img src="images/product3.jpg" alt="Fabric Bundle Set" loading="lazy">
+          <h3>Fabric Bundle Set</h3>
+          <p>$35.00</p>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 FabricCrafts | Designed by Reatha Thorn</p>
   </footer>
