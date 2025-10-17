@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | FabricCrafts</title>
-  <meta name="description" content="Explore our handmade fabric collection at FabricCrafts. Shop handwoven cotton, silk embroidery, and organic linen.">
+  <title>FabricCrafts | Products</title>
+  <meta name="description" content="Browse our unique collection of handmade fabrics and crafted accessories at FabricCrafts.">
   <meta name="author" content="Reatha Thorn">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="FabricCrafts | Products">
+  <meta property="og:description" content="Discover premium fabrics and handmade crafts designed to inspire creativity and comfort. Shop unique fabrics and accessories online.">
+  <meta property="og:image" content="https://reathathorn.github.io/wdd231/project/images/hero-bg.jpg">
+  <meta property="og:url" content="https://reathathorn.github.io/wdd231/project/products.html">
+  <link rel="icon" href="images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/project.css">
 </head>
 <body>
   <header>
     <img src="images/logo.png" alt="FabricCrafts Logo" class="logo">
-    <nav>
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="products.html" class="active">Products</a>
       <a href="about.html">About</a>
@@ -21,28 +26,34 @@
   </header>
 
   <main>
-    <section class="hero-section">
-      <img src="images/section1.jpg" alt="FabricCrafts Product Showcase" class="hero-image">
-      <div class="hero-text">
-        <h1>Our Handmade Fabrics</h1>
-        <p>Discover beautifully crafted materials inspired by nature and culture.</p>
-      </div>
-    </section>
-
     <section class="products-section">
-      <h2>Featured Products</h2>
+      <h1>Our Products</h1>
+      <p>Explore our handcrafted fabrics and accessories made with care and creativity.</p>
+
       <div class="product-list">
-        <!-- Products will load dynamically from products.json -->
+        <div class="product-card">
+          <img src="images/product1.jpg" alt="Handwoven Fabric" loading="lazy">
+          <h3>Handwoven Fabric</h3>
+          <p>$25.00</p>
+        </div>
+        <div class="product-card">
+          <img src="images/product2.jpg" alt="Crafted Accessories" loading="lazy">
+          <h3>Crafted Accessories</h3>
+          <p>$15.00</p>
+        </div>
+        <div class="product-card">
+          <img src="images/product3.jpg" alt="Artisan Fabric" loading="lazy">
+          <h3>Artisan Fabric</h3>
+          <p>$30.00</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-info">
-      <p>&copy; 2025 FabricCrafts | Designed by Reatha Thorn</p>
-    </div>
+    <p>&copy; 2025 FabricCrafts | Designed by Reatha Thorn</p>
   </footer>
 
-  <script src="scripts/products.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
