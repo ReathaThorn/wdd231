@@ -3,72 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | FabricCrafts</title>
-  <meta name="description" content="Welcome to FabricCrafts — explore premium fabrics and handmade crafts designed for creativity and comfort.">
-  <meta name="author" content="Reatha Thorn">
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico">
-
-  <!-- Open Graph Meta -->
-  <meta property="og:title" content="FabricCrafts | Home">
-  <meta property="og:description" content="Discover premium fabrics and handmade crafts designed to inspire creativity and comfort.">
-  <meta property="og:image" content="https://reathathorn.github.io/wdd231/project/images/hero-bg.jpg">
-  <meta property="og:url" content="https://reathathorn.github.io/wdd231/project/index.html">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/project.css">
+  <meta name="description" content="Experience thrilling white-water adventures with Battambang Rafting Adventures. Join us for safe, scenic, and fun rafting trips for all skill levels!">
+  <title>Battambang Rafting Adventures | Home</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <!-- HEADER -->
   <header>
-    <img src="images/logo.png" alt="FabricCrafts Logo" class="logo">
+    <h1>Battambang Rafting Adventures</h1>
     <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- MAIN -->
-  <main>
-    <section class="hero-section">
-      <img src="images/hero-bg.jpg" alt="FabricCrafts Hero Image" class="hero-image">
-      <div class="hero-text">
-        <h1>Welcome to FabricCrafts</h1>
-        <p>Handmade fabrics and creative craft accessories to inspire your projects.</p>
-      </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/hero.jpg" alt="Rafting adventure on a scenic river">
+    <div class="hero-text">
+      <h2>Adventure Awaits on Every Wave</h2>
+      <a href="trips.html" class="cta">View Our Trips</a>
+    </div>
+  </section>
 
-    <section class="products-section">
-      <h2>Featured Products</h2>
-      <div class="product-list">
-        <div class="product-card">
-          <img src="images/product1.jpg" alt="Handwoven Cotton" loading="lazy">
-          <h3>Handwoven Cotton</h3>
-          <p>$25.00</p>
-        </div>
-        <div class="product-card">
-          <img src="images/product2.jpg" alt="Silk Scarf" loading="lazy">
-          <h3>Silk Scarf</h3>
-          <p>$40.00</p>
-        </div>
-        <div class="product-card">
-          <img src="images/product3.jpg" alt="Fabric Bundle Set" loading="lazy">
-          <h3>Fabric Bundle Set</h3>
-          <p>$35.00</p>
-        </div>
-      </div>
-    </section>
-  </main>
+  <!-- Newsletter Signup -->
+  <section class="newsletter">
+    <h3>Join Our Adventure Newsletter</h3>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
-  <!-- FOOTER -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <button type="submit">Sign Up Now</button>
+    </form>
+  </section>
+
+  <!-- About / Grid Section -->
+  <section class="about-grid">
+    <div>
+      <img src="images/trip1.jpg" alt="Rafting in calm waters">
+      <h3>Beginner Adventures</h3>
+      <p>Enjoy smooth rides and scenic views perfect for first-time rafters.</p>
+    </div>
+    <div>
+      <img src="images/trip2.jpg" alt="White-water challenge">
+      <h3>Thrilling Rapids</h3>
+      <p>Challenge the waves and test your teamwork on exciting rapid courses.</p>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 FabricCrafts | Designed by Reatha Thorn</p>
+    <p>&copy; <span id="year"></span> Battambang Rafting Adventures | All Rights Reserved</p>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
