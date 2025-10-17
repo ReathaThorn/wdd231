@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover our most popular rafting trips and book your next adventure with Battambang Rafting Adventures.">
+  <title>Battambang Rafting Adventures | Trips</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Battambang Rafting Adventures</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trips.html" class="active">Trips</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="trip-intro">
+    <h2>Choose Your Rafting Adventure</h2>
+    <p>We offer a variety of guided rafting trips for all levels — from peaceful floats to extreme rapids!</p>
+    <a href="contact.html" class="cta">Book Your Trip</a>
+  </section>
+
+  <section class="trips-list">
+    <article>
+      <img src="images/trip1.jpg" alt="Beginner rafting trip">
+      <h3>Beginner River Float</h3>
+      <p>2-hour scenic route with calm waters. Perfect for families and first-timers.</p>
+    </article>
+
+    <article>
+      <img src="images/trip2.jpg" alt="Intermediate rafting trip">
+      <h3>Intermediate Rapids Run</h3>
+      <p>Half-day trip through Class III rapids. Great for adventure seekers.</p>
+    </article>
+
+    <article>
+      <img src="images/trip3.jpg" alt="Advanced rafting trip">
+      <h3>Extreme Challenge</h3>
+      <p>Full-day Class IV–V experience. For experienced rafters only!</p>
+    </article>
+  </section>
+
+  <section class="trip-table">
+    <h3>Trip Summary</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Trip</th>
+          <th>Duration</th>
+          <th>Difficulty</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Beginner River Float</td>
+          <td>2 hours</td>
+          <td>Easy</td>
+          <td>$40</td>
+        </tr>
+        <tr>
+          <td>Intermediate Rapids Run</td>
+          <td>4 hours</td>
+          <td>Moderate</td>
+          <td>$70</td>
+        </tr>
+        <tr>
+          <td>Extreme Challenge</td>
+          <td>8 hours</td>
+          <td>Hard</td>
+          <td>$120</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Battambang Rafting Adventures | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
